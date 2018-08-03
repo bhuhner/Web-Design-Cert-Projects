@@ -1,0 +1,103 @@
+<style>
+.background {
+  background-color: #f4b642;
+}
+
+#body-container {
+  background-color: white;
+  margin: 10px 10px 10px 10px
+}
+
+.doc-text {
+  font-family: lucida console, monospace;
+  color: #427df4
+}
+
+#title {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+}
+
+#survey-container {
+  display: grid;
+  grid-template-columns: 48% 10px 245px;
+}
+
+p {
+  font-family: lucida console, monospace;
+  color: #427df4
+}
+
+label {
+  font-family: lucida console, monospace;
+  color: #427df4
+}
+</style>
+
+<body class="background">
+  <div id="body-container">
+    <!--Title and such-->
+    <header>
+      <h1 class="doc-text" id="title">Basic Personal Information, Please!</h1>
+      <p class="doc-text" id="description">Just a few details about you, if you don't mind.</p>
+    </header>
+    
+    <!--setup the form alignment & columns-->
+    <form align="center">
+      <div id="survey-container">
+        
+        <!--first row for name-->
+        <p align="right" id="name-label">Name?*</p>
+        <p> </p>
+        <input type="text" id="name" placeholder="First & Last" required>
+        
+        <!--second row for email-->
+        <p align="right" id="email-label">Email?*</p>
+        <p> </p>
+        <input type="email" id="email" placeholder="someone@123.com" required>
+      
+      <!--third row for age-->
+        <p align="right" id="number-label">Age?*</p>
+        <p> </p>
+        <input type="number" id="number" min="0" max = "150" placeholder="0-150" required>
+      
+      <!--checkboxes-->  
+        <p align="right" id="number-label">How experienced would you say you are with our product? <em>(Feel free to check multiple boxes!)*</em></p>
+        <p> </p>
+        <div>
+          <div><label for="all-the-time"><input id="all-the-time" type="checkbox" name="experience-level" value="I use it all the time!">I use it all the time!</label></div>
+          <div><label for="wanna-learn-more"><input id="wanna-learn-more" type="checkbox" name="experience-level" value="I want to learn more.">I want to learn more.</label></div>
+          <div><label for="questions"><input id="questions" type="checkbox" name="experience-level" value="I have some questions about it.">I have some questions about it.</label></div>
+        </div>
+        
+      <!--radio options-->
+        <p align="right" id="">Do you want us to contact you via email?*</p>
+        <p> </p>
+        <div>
+          <label for="contact-pref"> 
+            <input id="contact-pref" type="radio" name="contact-pref" checked>Sure.
+          </label>
+          <label for="contact-pref"> 
+            <input id="contact-pref" type="radio" name="contact-pref">Please don't.
+          </label>
+        </div>
+        
+      
+      <!--row for comments, not required--> 
+        <p align="right" id="number-label">Any other information to know about you?</p>
+        <p> </p>
+        <input type="textarea" id="number" placeholder="Don't be shy!">
+        
+      </div>
+      <!--submit button at the end-->
+      <div align="center">
+        <p><em>*Response required.</em></p>
+        <button type="submit" id="submit" class="doc-text">Submit :)</submit>
+      </div>
+    </form>
+  </div>
+  
+</body>
